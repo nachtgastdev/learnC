@@ -1,0 +1,189 @@
+1. Клонируем репозиторий с гитхаба:
+	(в нужной папке: git clone <https://github.com/nachtgastdev/C.git>)
+
+2. После каких-либо действий в папке, нужные файлы нужно проиндексир-
+овать:
+	(в нужной папке: git add <название файла(папки)> или *(все))
+	
+3. Чтобы закоммитить изменения:
+		(git commit -m <сообщение>)
+		если в первый раз то будет ругатся что не знает имя и почту:
+		(git config  --global user.email <"nachtgastdev@gmail.com">
+		 git config  --global user.name <"nachtgastdev_work">)
+
+4. Прежде чем переносить изменения нужно проверить какие репы у меня 
+есть:
+(git remote -v) => origin  https://github.com/nachtgastdev/C.git (fetch)
+				   origin  https://github.com/nachtgastdev/C.git (push)
+			
+5. Перенос:
+				(git push origin master)
+				
+Подготовка локального git репозитория
+
+Подготовить локальный репозиторий можно двумя способами: создать 
+репозиторий с нуля с последующим переносом изменений в удаленный 
+репозиторий и сделать клон удаленного репозитория.
+Первый способ создание локального репозитория с нуля командой git init.
+Создадим проект на локальной машине с таким именем:
+
+mkdir your_project
+
+перейдем в этот каталог:
+
+cd your_project
+
+Выполним команду git init которая инициирует локальный репозиторий:
+
+git init
+
+Дальше можно добавлять файлы в локальный репозиторий.
+Второй способ. Сделать на локальной машине клон удалённого репозитория 
+командой git clone:
+
+git clone https://github.com/you_account/your_project
+
+После этой команды у нас появится новый каталог в котором находится 
+копия удаленного репозитория, а все файлы которые в нем находятся будут 
+отслеживаться гитом. Тут очень важный момент именно копия всего 
+репозитория, а не снимок текущего состояния удаленного репозитория. 
+В отличие от обычного снимка удаленного репозитория, например как в SVN 
+мы, будучи скопировав удаленный репозиторий, можем покопаться в его 
+истории, посмотреть все его правки, кто и когда вносил изменения, какие 
+у него ветки, то есть у нас на машине полноценный репозиторий который 
+теперь не зависит от удаленного репозитория с которого был склонирован.
+Подготовка локального файла
+
+После того как появился локальный репозиторий, добавим в него джава 
+класc. Перейдём в каталог, который отслеживается репозиторием и создадим
+ какой-нибудь файл::
+TestGitHub.java
+?
+1
+2
+3
+4
+5
+	
+public class TestGitHub {
+    public static void main(String [] args) {
+        System.out.println("Test hibHub");
+    }
+}
+Помещение файла в репозиторий
+
+После того как мы создали файл его надо подготовить для фиксации и 
+зафиксировать в репозитории, то есть закомитить. Подготовить для 
+фиксации это означает, что его надо проиндексировать командой git add:
+
+git add *
+
+Проиндексированный файл это еще не означает, что он закомичен, это 
+означает, что он готов для коммита в репозиторий, а сам коммит 
+выполняется командой git commit:
+
+git commit -m "create project"
+
+[master 412c945] create project
+ Committer: zheka <zheka@zheka-Vostro-3560.(none)>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 5 insertions(+)
+ create mode 100644 src/TestGitHub.java
+
+Если гит ругнется как показано ниже:
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'computer-name.(none)')
+
+значит перед тем как коммитить изменения надо сообщить гиту свое имя и 
+почту. Это нужно сделать так как гит включает эту инфу в каждую 
+фиксированную версию:
+
+git config --global user.name "user"
+git config --global user.email user@example.com
+
+Перенос изменений на удаленный репозиторий
+
+Локальный репозиторий готов, теперь осталось перенести его на удаленный.
+ Переносится репозиторий командой git push, но прежде чем переносить мы 
+ должны выяснить со сколькими репозиториями мы работаем и выбрать из 
+ списка тот, в который мы хотим перенести наши изменения. Для того, 
+ чтобы увидеть все удаленные репозитории нужно выполнить команду 
+ git remote -v:
+
+git remote -v
+origin  https://github.com/your_account/your_project (fetch)
+origin  https://github.com/your_account/your_project (push)
+
+Но мы увидим удаленные репозитории только в том случае, если мы с 
+клонировали его командой git clone, в случае если мы создали локальный 
+репозиторий командой git init, то мы ничего не увидим, в этом случае нам
+ надо добавить удаленный репозиторий, это будет далее. А сейчас, 
+ допустим у нас есть клон удалённого репозитория. Выполнив 
+ команду git remote -v мы увидим url адреса и короткое имя для удалённых
+  репозиториев с которыми мы работаем. В данном случае мы работаем с 
+  одним удаленным репозиторием, которому присвоено короткое имя по 
+  умолчанию origin, который находится по адресу 
+  https://github.com/your_account/your_project как для фетча, так и для 
+  пуша.
+Теперь можем переносить все изменения для репозитория origin командой 
+git push:
+
+git push origin master
+
+Username for 'https://github.com': dev-blogs
+Password for 'https://dev-blogs@github.com': 
+To https://github.com/dev-blogs/your_project
+   eeb0736..412c945  master -> master
+
+После этого github запросит имя юзера и пароль.
+То что мы сейчас сделали мы запушили (выложили) наши локальные изменения
+ на удаленный репозиторий у которого айдишник origin в ветку master.
+Добавление удаленных репозиториев
+
+Если мы создали репозиторий командой git init, то чтобы перенести 
+изменения на удаленный репозиторий, нам надо его добавить 
+командой git remote add и придумать ему уникальное имя. Вот как 
+добавляется удаленный репозиторий:
+
+git remote add ourRep https://additional_git_address/your_account/your_
+                                                                project
+
+Мы задали удаленный репозиторий с коротким именем ourRep, который 
+располагается по адресу 
+https://additional_git_address/your_account/your_project. Если выполним 
+команду git remote, то увидим url адреса для пуша и фетча только что 
+добавленного удаленного репозитория:
+
+git remote -v
+ourRep  https://additional_git_address/your_account/your_project (fetch)
+ourRep  https://additional_git_address/your_account/your_project (push)
+
+Теперь зальём на него изменения командой git push:
+
+git push ourRep master
+
+Username for 'https://github.com': dev-blogs
+Password for 'https://dev-blogs@github.com': 
+To https://github.com/dev-blogs/your_project
+   eeb0736..412c945  master -> master
+				
