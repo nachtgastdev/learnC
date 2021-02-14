@@ -1,0 +1,3 @@
+/home/nachtgast/git/test/cliontest/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/nachtgast/git/test/cliontest/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/nachtgast/git/test/cliontest/cmake-build-debug/CMakeFiles/cliontest.dir
