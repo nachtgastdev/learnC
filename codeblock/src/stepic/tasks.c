@@ -16,3 +16,17 @@ void pythagoreanTable() {
         printf("\n");
     }
 }
+
+void perimeter_of_the_rectangle() {
+    /*
+    На вход программы поступают два целых числа — длины сторон прямоугольника.
+    Посчитайте и выведите периметр этого прямоугольника.
+    Периметр — сумма длин всех сторон.
+    */
+    float side_a, side_b;
+    puts("enter side a ");
+    scanf("%f", &side_a);
+    puts("enter side b ");
+    scanf("%f", &side_b);
+    printf("perimeter_of_the_rectangle = %d", (int)(side_a + side_b) * 2);
+}
