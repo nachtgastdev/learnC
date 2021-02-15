@@ -2,5 +2,5 @@
 
 int main() {
 	puts("I am in main!");
-	pythagoreanTable();
+	perimeter_of_the_rectangle();
 }
