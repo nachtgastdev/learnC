@@ -5,6 +5,6 @@
 #include <stdlib.h>
 
 //
-void init();
+void pythagoreanTable();
 //
 #endif /* STEPIC_ */

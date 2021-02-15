@@ -17,12 +17,17 @@
 	<stdio.h>
 	<stdlib.h>
 
-1613372754 source:/home/dev/git/C/learnC/codeblock/src/main/main.c
+1613384924 source:/home/dev/git/C/learnC/codeblock/src/main/main.c
 	"main.h"
 
-1613371985 /home/dev/git/C/learnC/codeblock/src/main/main.h
+1613384085 /home/dev/git/C/learnC/codeblock/src/main/main.h
 	<stdio.h>
 	<stdlib.h>
 	"../head_first/counter_card/counter_card.h"
 	"../core/core.h"
+	"../stepic/stepic.h"
+
+1613384924 /home/dev/git/C/learnC/codeblock/src/stepic/stepic.h
+	<stdio.h>
+	<stdlib.h>
 
