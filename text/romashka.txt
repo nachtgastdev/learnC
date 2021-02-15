@@ -1,0 +1,1 @@
+remmina -c .local/share/remmina/group_rdp_romashka_46-4-76-102-3398.remmina

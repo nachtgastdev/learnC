@@ -3,3 +3,26 @@
 	<stdio.h>
 	<stdlib.h>
 
+1613372754 source:/home/dev/git/C/learnC/codeblock/src/core/types.c
+	"core.h"
+
+1613371985 /home/dev/git/C/learnC/codeblock/src/core/core.h
+	<stdio.h>
+	<stdlib.h>
+
+1613371985 source:/home/dev/git/C/learnC/codeblock/src/head_first/counter_card/counter_card.c
+	"counter_card.h"
+
+1613371985 /home/dev/git/C/learnC/codeblock/src/head_first/counter_card/counter_card.h
+	<stdio.h>
+	<stdlib.h>
+
+1613372754 source:/home/dev/git/C/learnC/codeblock/src/main/main.c
+	"main.h"
+
+1613371985 /home/dev/git/C/learnC/codeblock/src/main/main.h
+	<stdio.h>
+	<stdlib.h>
+	"../head_first/counter_card/counter_card.h"
+	"../core/core.h"
+

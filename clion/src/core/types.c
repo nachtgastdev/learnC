@@ -1,6 +1,3 @@
-//
-// Created by nachtgast on 14.02.2021.
-//
 #include "core.h"
 
 void typeS() {
@@ -45,5 +42,10 @@ void typeS() {
     scanf("%lli", &long_long_var);
     printf("long_long_variable = %lli\n", long_long_var);
     fflush(stdin);
-}
 
+    printf("Enter the short_variable ");
+    short short_var = 6;
+    scanf("%hi", &short_var);
+    printf("short_variable = %i\n", short_var);
+    fflush(stdin);
+}
