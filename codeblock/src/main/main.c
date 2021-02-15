@@ -2,5 +2,5 @@
 
 int main() {
 	puts("I am in main!");
-	typeS();
+	init();
 }
