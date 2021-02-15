@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/cliontest.dir/src/main/main.c.o CMakeFiles/cliontest.dir/src/head_first/counter_card/counter_card.c.o CMakeFiles/cliontest.dir/src/core/types.c.o  -o cliontest 
