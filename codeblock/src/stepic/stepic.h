@@ -7,5 +7,6 @@
 //
 void pythagoreanTable();
 void perimeter_of_the_rectangle();
+void saturn();
 //
 #endif /* STEPIC_ */
